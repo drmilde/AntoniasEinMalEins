@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/rechnenBackground"
+    tools:context="com.example.milde.antoniaseinmaleins.RechnenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingRight="10dp"
+            android:text="0 Punkte"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="10 Sekunden"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:textAlignment="textEnd"
+            android:paddingRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvErgebnis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:textSize="150sp"
+        android:textColor="@color/rechnenText"
+        android:text="42"
+        />
+
+    <TextView
+        android:id="@+id/tvAufgabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="55sp"
+        android:textColor="@color/mainBackground"
+        android:text=""
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <Button
+            android:id="@+id/btnWeiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Die Nächste, bitte"
+            android:textSize="20sp"
+            android:layout_marginRight="50dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvReihe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/rechnenText"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:textAlignment="textEnd"
+            android:paddingRight="20dp"
+            android:text="7"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLoesung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:text="Lösung" />
+
+    <Button
+        android:id="@+id/btnNochmal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:enabled="false"
+        android:text="Nochmal" />
+
+
+</LinearLayout>

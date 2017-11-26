@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mainBackground">#e290cf</color>
+    <color name="settingsBackground">#a9edc7</color>
+    <color name="rechnenBackground">#cfe4f0</color>
+    <color name="rechnenText">#e93b5e</color>
+</resources>
