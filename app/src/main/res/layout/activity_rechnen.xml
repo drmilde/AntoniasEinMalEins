@@ -49,7 +49,7 @@
         android:layout_marginTop="0dp"
         android:textSize="150sp"
         android:textColor="@color/rechnenText"
-        android:text="42"
+        android:text="@string/initialAnswer"
         />
 
     <TextView

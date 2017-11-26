@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AntoniasEinMalEins</string>
+    <string name="initialAnswer">42</string>
 </resources>
