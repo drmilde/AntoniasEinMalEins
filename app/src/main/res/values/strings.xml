@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AntoniasEinMalEins</string>
     <string name="initialAnswer">42</string>
+    <string name="title_activity_new_settings">Settings</string>
 </resources>
