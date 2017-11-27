@@ -4,8 +4,14 @@
 
     >
 
-    <item android:title="Settings"
+    <item
+        android:title="Settings"
+        android:id="@+id/optionsMenuSetting"
         />
-    <item android:title="Play" />
-    <item android:title="About" />
+    <item android:title="Play"
+        android:id="@+id/optionsMenuPlay"
+        />
+    <item android:title="About"
+        android:id="@+id/optionsMenuAbout"
+        />
 </menu>
