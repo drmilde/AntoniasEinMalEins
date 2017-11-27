@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
     <CheckBoxPreference
         android:defaultValue="false"
         android:key="check_box_preference_1"
         android:title="1er reihe" />
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="check_box_preference_1"
+        android:key="check_box_preference_2"
         android:title="2er reihe" />
     <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="check_box_preference_1"
+        android:defaultValue="true"
+        android:key="check_box_preference_3"
         android:title="3er reihe" />
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="check_box_preference_1"
+        android:key="check_box_preference_4"
         android:title="4er reihe" />
     <ListPreference
         android:defaultValue="1"

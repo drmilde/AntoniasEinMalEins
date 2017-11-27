@@ -3,6 +3,8 @@ package com.example.milde.antoniaseinmaleins;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,6 +25,8 @@ public class RechnenActivity extends AppCompatActivity implements MyTimerFinishe
 
     private int score = 0;
     private int timerDuration = 60000;
+
+    private Animation animFadeOut;
 
 
     @Override
@@ -73,6 +77,7 @@ public class RechnenActivity extends AppCompatActivity implements MyTimerFinishe
             }
         });
 
+
     }
 
     @Override
@@ -82,10 +87,16 @@ public class RechnenActivity extends AppCompatActivity implements MyTimerFinishe
     }
 
     private void naechsteAufgabe() {
+        // Animationen laden
+        animFadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out);
+        animFadeOut.setDuration(2000);
+        tvAufgabe.setText(ag.getErgebnis() + " = " + ag.getAufgabe());
+        tvAufgabe.setAnimation(animFadeOut);
+
         ag.generate();
 
         tvErgebnis.setText(ag.getErgebnis());
-        tvAufgabe.setText("");
+        //tvAufgabe.setText("");
         tvReihe.setText(ag.getReihe());
     }
 
