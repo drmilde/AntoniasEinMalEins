@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnLos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), RechnenActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RechenFlipActivity.class);
                 startActivity(intent);
             }
         });

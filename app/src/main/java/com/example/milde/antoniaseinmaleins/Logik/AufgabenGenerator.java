@@ -1,4 +1,4 @@
-package com.example.milde.antoniaseinmaleins;
+package com.example.milde.antoniaseinmaleins.Logik;
 
 import java.util.Random;
 
@@ -10,10 +10,13 @@ public class AufgabenGenerator {
     private String ergebnis = "42";
     private String aufgabe = "6 x 7";
     private String reihe = "7";
+    private Random rn = new Random();
+
+    public AufgabenGenerator() {
+        rn = new Random();
+    }
 
     public void generate() {
-        Random rn = new Random();
-
         int f1 = rn.nextInt(10) + 1;
         int f2 = rn.nextInt(10) + 1;
 

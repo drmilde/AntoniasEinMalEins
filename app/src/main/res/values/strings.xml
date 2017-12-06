@@ -2,4 +2,9 @@
     <string name="app_name">AntoniasEinMalEins</string>
     <string name="initialAnswer">42</string>
     <string name="title_activity_new_settings">Settings</string>
+
+    <string name="card_back_title">Jan-Torsten</string>
+    <string name="card_back_description">Antonia und Jakob</string>
+    <string name="description_image_1">Ich mag mich</string>
+    <string name="card_fragment_bundle_layout_identifier">layout</string>
 </resources>

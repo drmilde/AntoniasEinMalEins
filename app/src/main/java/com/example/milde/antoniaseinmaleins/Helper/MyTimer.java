@@ -1,4 +1,4 @@
-package com.example.milde.antoniaseinmaleins;
+package com.example.milde.antoniaseinmaleins.Helper;
 
 import android.os.CountDownTimer;
 import android.widget.TextView;

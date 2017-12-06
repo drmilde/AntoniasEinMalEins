@@ -8,7 +8,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class RechnenActivity extends AppCompatActivity implements MyTimerFinishedCallback{
+import com.example.milde.antoniaseinmaleins.Helper.MyTimer;
+import com.example.milde.antoniaseinmaleins.Helper.MyTimerFinishedCallback;
+import com.example.milde.antoniaseinmaleins.Logik.AufgabenGenerator;
+
+public class RechnenActivity extends AppCompatActivity implements MyTimerFinishedCallback {
 
     private AufgabenGenerator ag = new AufgabenGenerator();
     private Button btnNaechsteAufgabe;
