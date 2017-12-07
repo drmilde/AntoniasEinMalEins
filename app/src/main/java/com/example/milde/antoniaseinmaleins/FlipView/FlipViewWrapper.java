@@ -36,8 +36,11 @@ public class FlipViewWrapper {
         bundleBack.putInt(
                 String.valueOf(R.string.card_fragment_bundle_layout_identifier),
                 layoutBackID);
+
         bundleBack.putString("ergebnis", afg.getErgebnis());
+        bundleBack.putString("ergebnis", "");
         bundleBack.putString("aufgabe", afg.getAufgabe());
+
         backSide.setArguments(bundleBack);
     }
 

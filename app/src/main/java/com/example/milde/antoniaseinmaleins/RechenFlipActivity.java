@@ -14,7 +14,7 @@ import com.example.milde.antoniaseinmaleins.Helper.MyTimerFinishedCallback;
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenGenerator;
 
 public class RechenFlipActivity extends AppCompatActivity implements MyTimerFinishedCallback {
-    private int mShowing = 0;
+    private int mShowing = 1;
     private FlipViewWrapper flipViewWrapper;
 
     private AufgabenGenerator ag = new AufgabenGenerator();
@@ -107,12 +107,13 @@ public class RechenFlipActivity extends AppCompatActivity implements MyTimerFini
             }
         });
 
-
     }
 
     private void weiterBlaettern(int step) {
         naechsteAufgabe();
-        score += step;
+        if (mShowing == 1) {
+            score += step;
+        }
         tvScore.setText(score + " Punkte");
     }
 
