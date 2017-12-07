@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="meine_werte_liste">
+        <item>Alle</item>
         <item>1er Reihe</item>
         <item>2er Reihe</item>
         <item>3er Reihe</item>
