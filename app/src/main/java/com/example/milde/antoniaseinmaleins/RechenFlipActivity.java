@@ -41,6 +41,15 @@ public class RechenFlipActivity extends AppCompatActivity implements MyTimerFini
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rechen_flip);
 
+
+        // initialize the AufgabenMixer
+        int maxAdd = getResources().getInteger(R.integer.addRangeAufgabenMixer);
+        int maxMin = getResources().getInteger(R.integer.minRangeAufgabenMixer);
+        int maxMul = getResources().getInteger(R.integer.mulRangeAufgabenMixer);
+        int maxDiv = getResources().getInteger(R.integer.divRangeAufgabenMixer);
+        afg = new AufgabenMixer(maxAdd, maxMin, maxMul, maxDiv);
+
+
         flipViewWrapper = new FlipViewWrapper(
                 R.layout.front_card_calulation,
                 R.layout.back_card_calculation,

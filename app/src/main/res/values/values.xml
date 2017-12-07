@@ -4,4 +4,10 @@
     <integer name="card_flip_time_full">400</integer>
     <integer name="card_flip_time_half">100</integer>
 
+    <!-- Bereich des AufgabenMixers -->
+    <integer name="addRangeAufgabenMixer">25</integer>
+    <integer name="minRangeAufgabenMixer">50</integer>
+    <integer name="mulRangeAufgabenMixer">10</integer>
+    <integer name="divRangeAufgabenMixer">10</integer>
+
 </resources>

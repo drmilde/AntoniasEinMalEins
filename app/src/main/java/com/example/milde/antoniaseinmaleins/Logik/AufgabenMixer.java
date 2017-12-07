@@ -1,5 +1,9 @@
 package com.example.milde.antoniaseinmaleins.Logik;
 
+import android.content.res.Resources;
+
+import com.example.milde.antoniaseinmaleins.R;
+
 import java.util.Random;
 
 /**
@@ -12,19 +16,33 @@ public class AufgabenMixer implements IAufgabenGenerator{
     private AufgabenGenerator afgMul;
     private AufgabenGenerator afgDiv;
 
+    private int maxAdd = 20;
+    private int maxMin = 40;
+    private int maxMul = 10;
+    private int maxDiv = 10;
+
     // state
     private int state = 0;
     private Random rn = new Random();
 
-    public AufgabenMixer() {
-        afgAdd = new AufgabenGenerator(20, AufgabenGenerator.ADD_TYPE);
-        afgMin = new AufgabenGenerator(40, AufgabenGenerator.MIN_TYPE);
-        afgMul = new AufgabenGenerator(10, AufgabenGenerator.MUL_TYPE);
-        afgDiv = new AufgabenGenerator(10, AufgabenGenerator.DIV_TYPE);
+    public AufgabenMixer(int maxAdd, int maxMin, int maxMul, int maxDiv) {
+        this.maxAdd = maxAdd;
+        this.maxMin = maxMin;
+        this.maxMul = maxMul;
+        this.maxDiv = maxDiv;
+
+        afgAdd = new AufgabenGenerator(maxAdd, AufgabenGenerator.ADD_TYPE);
+        afgMin = new AufgabenGenerator(maxMin, AufgabenGenerator.MIN_TYPE);
+        afgMul = new AufgabenGenerator(maxMul, AufgabenGenerator.MUL_TYPE);
+        afgDiv = new AufgabenGenerator(maxDiv, AufgabenGenerator.DIV_TYPE);
 
         state = 0;
     }
 
+
+    public AufgabenMixer() {
+        this(20, 40, 10, 10);
+    }
 
     @Override
     public String getFrage() {
