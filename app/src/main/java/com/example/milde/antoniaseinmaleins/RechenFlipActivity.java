@@ -1,6 +1,8 @@
 package com.example.milde.antoniaseinmaleins;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,7 @@ import com.example.milde.antoniaseinmaleins.Helper.MyTimer;
 import com.example.milde.antoniaseinmaleins.Helper.MyTimerFinishedCallback;
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenGenerator;
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenMixer;
+import com.example.milde.antoniaseinmaleins.Logik.ConfigAufgaben;
 import com.example.milde.antoniaseinmaleins.Logik.IAufgabenGenerator;
 
 public class RechenFlipActivity extends AppCompatActivity implements MyTimerFinishedCallback {
@@ -20,6 +23,7 @@ public class RechenFlipActivity extends AppCompatActivity implements MyTimerFini
     private FlipViewWrapper flipViewWrapper;
 
     private IAufgabenGenerator afg = new AufgabenMixer();
+    private ConfigAufgaben cfg = new ConfigAufgaben(10);
 
     // Control
     private Button btnNaechsteAufgabe;
@@ -171,5 +175,23 @@ public class RechenFlipActivity extends AppCompatActivity implements MyTimerFini
         btnNochmal.setEnabled(true);
         btnNaechsteAufgabe.setEnabled(false);
         btnAufgabeFalsch.setEnabled(false);
+    }
+
+
+    private void loadPreferences() {
+        SharedPreferences sharedPref =
+                PreferenceManager.getDefaultSharedPreferences(this);
+
+        boolean doAdd = sharedPref.getBoolean("cb_addition", true);
+        boolean doMin = sharedPref.getBoolean("cb_subtraktion", true);
+        boolean doMul = sharedPref.getBoolean("cb_multiplikation", true);
+        boolean doDiv = sharedPref.getBoolean("cb_division", true);
+
+        cfg.setDoAdd(doAdd);
+        cfg.setDoMin(doMin);
+        cfg.setDoMul(doMul);
+        cfg.setDoDiv(doDiv);
+
+        //TODO Reihen aulesen
     }
 }

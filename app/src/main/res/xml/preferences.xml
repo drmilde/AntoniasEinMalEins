@@ -7,19 +7,19 @@
         >
         <CheckBoxPreference
             android:defaultValue="true"
-            android:key="check_box_preference_1"
+            android:key="cb_addition"
             android:title="Addition" />
         <CheckBoxPreference
             android:defaultValue="true"
-            android:key="check_box_preference_2"
+            android:key="cb_subtraktion"
             android:title="Subtraktion" />
         <CheckBoxPreference
             android:defaultValue="true"
-            android:key="check_box_preference_3"
+            android:key="cb_multiplikation"
             android:title="Multiplikation" />
         <CheckBoxPreference
             android:defaultValue="true"
-            android:key="check_box_preference_4"
+            android:key="cb_division"
             android:title="Division" />
     </PreferenceCategory>
 
@@ -31,16 +31,9 @@
             android:defaultValue="0"
             android:entries="@array/meine_werte_liste"
             android:entryValues="@array/meine_werte_liste"
-            android:key="meine_werte_liste_wert"
+            android:key="auswahl_reihe"
             android:title="Welche Reihe soll geübt werden" />
-        <EditTextPreference
-            android:defaultValue="Alle"
-            android:key="edit_text_preference_1"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
-            android:clickable="false"
-            android:selectable="false"
-            android:title="Alle" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
