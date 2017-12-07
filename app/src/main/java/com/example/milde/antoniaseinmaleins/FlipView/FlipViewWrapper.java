@@ -3,6 +3,7 @@ package com.example.milde.antoniaseinmaleins.FlipView;
 import android.os.Bundle;
 
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenGenerator;
+import com.example.milde.antoniaseinmaleins.Logik.IAufgabenGenerator;
 import com.example.milde.antoniaseinmaleins.R;
 
 import java.util.Random;
@@ -18,11 +19,12 @@ public class FlipViewWrapper {
     private CardSideFragment frontSide;
     private CardSideFragment backSide;
 
-    private AufgabenGenerator afg = new AufgabenGenerator();
+    private IAufgabenGenerator afg;
 
-    public FlipViewWrapper(int layoutFrontID, int layoutBackID) {
+    public FlipViewWrapper(int layoutFrontID, int layoutBackID, IAufgabenGenerator afg) {
         this.layoutFrontID = layoutFrontID;
         this.layoutBackID = layoutBackID;
+        this.afg = afg;
 
 
         // init front- und backside
@@ -52,7 +54,7 @@ public class FlipViewWrapper {
                 String.valueOf(R.string.card_fragment_bundle_layout_identifier),
                 layoutFrontID);
         bundleFront.putString("ergebnis", afg.getErgebnis());
-        bundleFront.putString("aufgabe", afg.getReihe() + " x ?");
+        bundleFront.putString("aufgabe", afg.getFrage());
         frontSide.setArguments(bundleFront);
     }
 

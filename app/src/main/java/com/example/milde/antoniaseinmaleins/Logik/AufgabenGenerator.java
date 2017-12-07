@@ -6,15 +6,16 @@ import java.util.Random;
  * Created by milde on 26.11.17.
  */
 
-public class AufgabenGenerator {
-    private static final int ADD_TYPE = 0;
-    private static final int MIN_TYPE = 1;
-    private static final int MUL_TYPE = 2;
-    private static final int DIV_TYPE = 3;
+public class AufgabenGenerator implements IAufgabenGenerator{
+    public static final int ADD_TYPE = 0;
+    public static final int MIN_TYPE = 1;
+    public static final int MUL_TYPE = 2;
+    public static final int DIV_TYPE = 3;
 
     // strings
     private String ergebnis = "42";
     private String aufgabe = "6 x 7";
+    private String frage = "6 x ?";
     private String reihe = "7";
     private Random rn = new Random();
 
@@ -30,10 +31,12 @@ public class AufgabenGenerator {
         this();
         this.maxOp = maxOp;
         this.excerciseType = excerciseType;
+        generate();
     }
 
     public AufgabenGenerator() {
         rn = new Random();
+        generate();
     }
 
     public void generate() {
@@ -45,12 +48,18 @@ public class AufgabenGenerator {
                 result = op01 + op02;
                 break;
             case MIN_TYPE:
+                // nur positiove zahlen
+                while ((op01 - op02) < 0) {
+                    op02 = rn.nextInt(maxOp) + 1;
+                }
                 result = op01 - op02;
                 break;
             case MUL_TYPE:
                 result = op01 * op02;
                 break;
             case DIV_TYPE:
+                // nur ganzzahlige divisionen sind zulässig
+                op01 = op01 * op02;
                 result = op01 / op02;
                 break;
             default:
@@ -67,20 +76,27 @@ public class AufgabenGenerator {
         switch (excerciseType) {
             case ADD_TYPE:
                 aufgabe = op01 + " + " + op02;
+                frage = op01 + " + ?";
                 break;
             case MIN_TYPE:
                 aufgabe = op01 + " - " + op02;
+                frage = op01 + " - ?";
                 break;
             case MUL_TYPE:
                 aufgabe = op01 + " x " + op02;
+                frage = op01 + " x ?";
                 break;
             case DIV_TYPE:
                 aufgabe = op01 + " / " + op02;
+                frage = op01 + " / ?";
                 break;
         }
 
         reihe = "" + op01;
     }
+
+
+    // Interfave IAufgabenGenerator
 
     public String getErgebnis() {
         return ergebnis;
@@ -92,5 +108,9 @@ public class AufgabenGenerator {
 
     public String getReihe() {
         return reihe;
+    }
+
+    public String getFrage() {
+        return frage;
     }
 }

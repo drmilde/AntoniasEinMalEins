@@ -12,12 +12,14 @@ import com.example.milde.antoniaseinmaleins.FlipView.FlipViewWrapper;
 import com.example.milde.antoniaseinmaleins.Helper.MyTimer;
 import com.example.milde.antoniaseinmaleins.Helper.MyTimerFinishedCallback;
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenGenerator;
+import com.example.milde.antoniaseinmaleins.Logik.AufgabenMixer;
+import com.example.milde.antoniaseinmaleins.Logik.IAufgabenGenerator;
 
 public class RechenFlipActivity extends AppCompatActivity implements MyTimerFinishedCallback {
     private int mShowing = 1;
     private FlipViewWrapper flipViewWrapper;
 
-    private AufgabenGenerator ag = new AufgabenGenerator();
+    private IAufgabenGenerator afg = new AufgabenMixer();
 
     // Control
     private Button btnNaechsteAufgabe;
@@ -41,7 +43,8 @@ public class RechenFlipActivity extends AppCompatActivity implements MyTimerFini
 
         flipViewWrapper = new FlipViewWrapper(
                 R.layout.front_card_calulation,
-                R.layout.back_card_calculation
+                R.layout.back_card_calculation,
+                afg
         );
 
         if (savedInstanceState == null) {
