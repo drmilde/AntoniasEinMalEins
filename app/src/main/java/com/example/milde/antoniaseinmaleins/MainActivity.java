@@ -42,7 +42,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnTableList = (Button)findViewById(R.id.btnTableList);
 
+        btnTableList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showTableList();
+            }
+        });
+
+    }
+
+    private void showTableList() {
+        Intent intent = new Intent(getApplicationContext(), TableActivity.class);
+        startActivity(intent);
     }
 
     private void showSettings() {
