@@ -70,4 +70,24 @@ public class ConfigAufgaben {
     public void setDoDiv(boolean doDiv) {
         this.doDiv = doDiv;
     }
+
+
+    // getter
+
+
+    public boolean isDoAdd() {
+        return doAdd;
+    }
+
+    public boolean isDoMin() {
+        return doMin;
+    }
+
+    public boolean isDoMul() {
+        return doMul;
+    }
+
+    public boolean isDoDiv() {
+        return doDiv;
+    }
 }

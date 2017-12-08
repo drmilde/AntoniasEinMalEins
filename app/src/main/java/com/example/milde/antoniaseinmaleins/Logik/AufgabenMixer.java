@@ -16,6 +16,8 @@ public class AufgabenMixer implements IAufgabenGenerator{
     private AufgabenGenerator afgMul;
     private AufgabenGenerator afgDiv;
 
+    private ConfigAufgaben cfg = null;
+
     private int maxAdd = 20;
     private int maxMin = 40;
     private int maxMul = 10;
@@ -111,5 +113,10 @@ public class AufgabenMixer implements IAufgabenGenerator{
         afgMin.generate();
         afgMul.generate();
         afgDiv.generate();
+    }
+
+    @Override
+    public void setConfig(ConfigAufgaben cfg) {
+        this.cfg = cfg;
     }
 }

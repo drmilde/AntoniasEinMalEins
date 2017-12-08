@@ -193,5 +193,6 @@ public class RechenFlipActivity extends AppCompatActivity implements MyTimerFini
         cfg.setDoDiv(doDiv);
 
         //TODO Reihen aulesen
+        //TODO Api Level checken, wegen textAlign in style.xml
     }
 }

@@ -12,6 +12,9 @@ public class AufgabenGenerator implements IAufgabenGenerator{
     public static final int MUL_TYPE = 2;
     public static final int DIV_TYPE = 3;
 
+    // Configuration
+    private ConfigAufgaben cfg = null;
+
     // strings
     private String ergebnis = "42";
     private String aufgabe = "6 x 7";
@@ -68,6 +71,11 @@ public class AufgabenGenerator implements IAufgabenGenerator{
                 break;
         }
         createStrings();
+    }
+
+    @Override
+    public void setConfig(ConfigAufgaben cfg) {
+        this.cfg = cfg;
     }
 
     private void createStrings() {

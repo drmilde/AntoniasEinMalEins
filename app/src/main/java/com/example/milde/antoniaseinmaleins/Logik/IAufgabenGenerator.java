@@ -12,4 +12,5 @@ public interface IAufgabenGenerator {
     public String getReihe();
 
     public void generate();
+    public void setConfig(ConfigAufgaben cfg);
 }
