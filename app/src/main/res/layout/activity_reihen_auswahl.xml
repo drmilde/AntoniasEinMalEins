@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/antonia_jakob"
     android:orientation="vertical"
-    tools:context="com.example.milde.antoniaseinmaleins.Logik.ReihenAuswahlActivity">
+    tools:context="com.example.milde.antoniaseinmaleins.ReihenAuswahlActivity">
 
 
     <TableLayout

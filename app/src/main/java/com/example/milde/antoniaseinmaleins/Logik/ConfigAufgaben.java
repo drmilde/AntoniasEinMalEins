@@ -55,7 +55,6 @@ public class ConfigAufgaben {
 
     // setter
 
-
     public void setDoAdd(boolean doAdd) {
         this.doAdd = doAdd;
     }
@@ -74,7 +73,6 @@ public class ConfigAufgaben {
 
 
     // getter
-
 
     public boolean isDoAdd() {
         return doAdd;

@@ -20,7 +20,7 @@
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".RechenFlipActivity" />
-        <activity android:name=".Logik.ReihenAuswahlActivity"></activity>
+        <activity android:name=".ReihenAuswahlActivity"></activity>
     </application>
 
 </manifest>
