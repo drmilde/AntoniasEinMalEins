@@ -17,4 +17,17 @@
         <item name="android:layout_marginLeft">@dimen/margin</item>
     </style>
 
+    <style name="reihenStyle" parent="@android:style/Widget.TextView">
+        <item name="android:background">@drawable/card_border</item>
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">70dp</item>
+        <item name="android:textAlignment">center</item>
+
+        <item name="android:padding">70dp</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+
+    </style>
+
 </resources>

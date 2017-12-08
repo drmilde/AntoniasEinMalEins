@@ -11,4 +11,7 @@
     <color name="rechnenText">#e93b5e</color>
     <color name="grey">#ccc</color>
 
+    <color name="card_shape_background">#abcedf</color>
+    <color name="card_shape_border">#000</color>
+
 </resources>
