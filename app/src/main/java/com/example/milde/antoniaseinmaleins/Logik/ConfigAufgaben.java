@@ -35,6 +35,7 @@ public class ConfigAufgaben {
         doDiv = true;
     }
 
+    //TODO hier fehlt noch das Setzten der Reihen
 
     private void initSeries() {
         for (int i = 0; i < series.length; i++) {
