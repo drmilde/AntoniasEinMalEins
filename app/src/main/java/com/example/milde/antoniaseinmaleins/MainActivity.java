@@ -1,7 +1,6 @@
 package com.example.milde.antoniaseinmaleins;
 
 import android.content.Intent;
-import android.opengl.GLSurfaceView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +8,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.milde.antoniaseinmaleins.Logik.ReihenAuswahlActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,10 +36,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnRowSelection = (Button)findViewById(R.id.btnRowSelection);
+        btnRowSelection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRowSelection();;
+            }
+        });
+
+
     }
 
     private void showSettings() {
         Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    private void showRowSelection() {
+        Intent intent = new Intent(getApplicationContext(), ReihenAuswahlActivity.class);
         startActivity(intent);
     }
 

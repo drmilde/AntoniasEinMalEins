@@ -9,7 +9,7 @@
 
     <!-- View border color and width -->
     <stroke
-        android:width="20dp"
+        android:width="6dp"
         android:color="@color/card_shape_border" >
     </stroke>
 

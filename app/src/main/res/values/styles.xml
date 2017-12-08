@@ -22,11 +22,14 @@
 
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">70dp</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textAlignment">center</item>
 
-        <item name="android:padding">70dp</item>
-        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">35dp</item>
+        <item name="android:paddingBottom">35dp</item>
+        <item name="android:layout_margin">2dp</item>
 
     </style>
 
