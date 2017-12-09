@@ -2,6 +2,8 @@ package com.example.milde.antoniaseinmaleins;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class TableActivity extends ListActivity {
 
@@ -20,5 +22,13 @@ public class TableActivity extends ListActivity {
 
         TableListViewAdapter adapter = new TableListViewAdapter(data, this);
         setListAdapter(adapter);
+
+        Button btnReiheUeben = (Button)findViewById(R.id.btnReiheUeben);
+        btnReiheUeben.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO switch tu new intent
+            }
+        });
     }
 }

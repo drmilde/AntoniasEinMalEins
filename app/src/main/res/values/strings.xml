@@ -7,4 +7,5 @@
     <string name="card_back_description">Antonia und Jakob</string>
     <string name="description_image_1">Ich mag mich</string>
     <string name="card_fragment_bundle_layout_identifier">layout</string>
+    <string name="reihe_ueben_button_text">Üben</string>
 </resources>

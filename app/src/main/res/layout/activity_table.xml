@@ -26,12 +26,12 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnReiheUeben"
         style="@style/buttonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:text="Button" />
+        android:text="@string/reihe_ueben_button_text" />
 
 </LinearLayout>
