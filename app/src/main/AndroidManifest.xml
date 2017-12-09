@@ -21,7 +21,8 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".RechenFlipActivity" />
         <activity android:name=".ReihenAuswahlActivity" />
-        <activity android:name=".TableActivity"></activity>
+        <activity android:name=".TableActivity" />
+        <activity android:name=".Aufgaben4Activity"></activity>
     </application>
 
 </manifest>

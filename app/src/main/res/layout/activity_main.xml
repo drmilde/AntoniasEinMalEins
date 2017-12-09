@@ -74,7 +74,7 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
-        android:id="@+id/btnTableList"
+        android:id="@+id/btnAufgabe4"
         style="@style/buttonStyle"
 
         android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
 
-        android:text="Tabelle"
+        android:text="Aufgabe4"
 
         app:layout_constraintTop_toBottomOf="@+id/btnRowSelection"
         app:layout_constraintRight_toRightOf="parent"

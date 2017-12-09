@@ -42,24 +42,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnTableList = (Button)findViewById(R.id.btnTableList);
+        Button btnAufgabe4 = (Button)findViewById(R.id.btnAufgabe4);
 
-        btnTableList.setOnClickListener(new View.OnClickListener() {
+        btnAufgabe4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showTableList();
+                showAufgaben();
             }
         });
 
     }
 
-    private void showTableList() {
-        Intent intent = new Intent(getApplicationContext(), TableActivity.class);
+    private void showAufgaben() {
+        Intent intent = new Intent(getApplicationContext(), Aufgaben4Activity.class);
 
         //TODO parameterisierung implemementieren
 
         // nur ein Test hier
-        intent.putExtra("reihe", 3);
+        intent.putExtra("answer1", 1);
+        intent.putExtra("answer2", 2);
+        intent.putExtra("answer3", 3);
+        intent.putExtra("answer1", 4);
         startActivity(intent);
 
 
