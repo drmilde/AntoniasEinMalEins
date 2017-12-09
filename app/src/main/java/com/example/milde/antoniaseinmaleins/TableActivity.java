@@ -14,7 +14,6 @@ public class TableActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
 
-
         Intent iin= getIntent();
         Bundle extras = iin.getExtras();
 

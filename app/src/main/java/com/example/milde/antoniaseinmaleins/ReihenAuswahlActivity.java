@@ -1,12 +1,10 @@
 package com.example.milde.antoniaseinmaleins;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.milde.antoniaseinmaleins.R;
 
 public class ReihenAuswahlActivity extends AppCompatActivity {
 
@@ -23,7 +21,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe2er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("2er Reihe");
+                callActivity("2er Reihe",2);
             }
         });
 
@@ -31,7 +29,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe3er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("3er Reihe");
+                callActivity("3er Reihe",3);
             }
         });
 
@@ -39,7 +37,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe4er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("4er Reihe");
+                callActivity("4er Reihe",4);
             }
         });
 
@@ -47,7 +45,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe5er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("5er Reihe");
+                callActivity("5er Reihe",5);
             }
         });
 
@@ -55,7 +53,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe6er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("6er Reihe");
+                callActivity("6er Reihe",6);
             }
         });
 
@@ -63,7 +61,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe7er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("7er Reihe");
+                callActivity("7er Reihe",7);
             }
         });
 
@@ -71,7 +69,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe8er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("8er Reihe");
+                callActivity("8er Reihe",8);
             }
         });
 
@@ -79,7 +77,7 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe9er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("9er Reihe");
+                callActivity("9er Reihe",9);
             }
         });
 
@@ -87,16 +85,16 @@ public class ReihenAuswahlActivity extends AppCompatActivity {
         tvReihe10er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                message("10er Reihe");
+                callActivity("10er Reihe",10);
             }
         });
 
-
-        // TODO callbacks an die entsprechende activity anbinden
-
     }
 
-    private void message(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    private void callActivity(String s, int reihe) {
+        Intent intent = new Intent(getApplicationContext(), TableActivity.class);
+        intent.putExtra("reihe", reihe);
+        startActivity(intent);
+
     }
 }
