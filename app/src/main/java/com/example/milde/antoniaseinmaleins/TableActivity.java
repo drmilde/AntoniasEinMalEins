@@ -11,11 +11,11 @@ public class TableActivity extends ListActivity {
         setContentView(R.layout.activity_table);
 
         String[] data = {
-                "3 x 2 = 6", "10 x 5 = 50",
-                "3 x 2 = 6", "10 x 5 = 50",
-                "3 x 2 = 6", "10 x 5 = 50",
-                "3 x 2 = 6", "10 x 5 = 50",
-                "3 x 2 = 6", "7 x 6 = 42"
+                "8 x 1 = 8", "8 x 2 = 16",
+                "8 x 3 = 24", "8 x 4 = 32",
+                "8 x 5 = 40", "8 x 6 = 48",
+                "8 x 7 = 56", "8 x 8 = 64",
+                "8 x 9 = 72", "8 x 10 = 80"
         };
 
         TableListViewAdapter adapter = new TableListViewAdapter(data, this);

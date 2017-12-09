@@ -17,7 +17,7 @@
         android:id="@android:id/list"
         style="@style/tableListStyle"
 
-        android:layout_width="200sp"
+        android:layout_width="180sp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
