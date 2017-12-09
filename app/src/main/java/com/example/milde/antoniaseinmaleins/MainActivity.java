@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO parameterisierung implmementieren
 
         // nur ein Test hier
-        intent.putExtra("reihe", 8);
+        intent.putExtra("reihe", 3);
         startActivity(intent);
 
 

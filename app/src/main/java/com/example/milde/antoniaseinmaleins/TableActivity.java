@@ -23,25 +23,29 @@ public class TableActivity extends ListActivity {
             reihe = extras.getInt("reihe");
         }
 
-        String[] data = {
-                "8 x 1 = 8", "8 x 2 = 16",
-                "8 x 3 = 24", "8 x 4 = 32",
-                "8 x 5 = 40", "8 x 6 = 48",
-                "8 x 7 = 56", "8 x 8 = 64",
-                "8 x 9 = 72", "8 x 10 = 80"
-        };
+        String[] data = new String[10];
+        generateTable(data, reihe);
 
         TableListViewAdapter adapter = new TableListViewAdapter(data, this);
         setListAdapter(adapter);
 
         Button btnReiheUeben = (Button)findViewById(R.id.btnReiheUeben);
-        btnReiheUeben.setText(getString(R.string.reihe_ueben_button_text) + reihe);
+        btnReiheUeben.setText(getString(R.string.reihe_ueben_button_text)
+                + " "
+                + reihe);
 
         btnReiheUeben.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO switch tu new intent
+                //TODO switch to new intent
             }
         });
+    }
+
+
+    private void generateTable(String[] data, int reihe) {
+        for (int i = 0; i < data.length; i++) {
+            data[i] = reihe + " x " + (i+1) + " = " + ((i+1)*reihe);
+        }
     }
 }
