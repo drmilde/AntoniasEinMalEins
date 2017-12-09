@@ -13,12 +13,16 @@
 
     <ListView
         xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:id="@android:id/list"
-        android:background="@color/grey"
-        android:layout_width="150dp"
+        style="@style/tableListStyle"
+
+        android:layout_width="200sp"
         android:layout_height="wrap_content"
-        android:padding="20dp"
         android:layout_gravity="center"
+
+        android:padding="20dp"
+        android:layout_marginTop="30sp"
         />
 
     <Button

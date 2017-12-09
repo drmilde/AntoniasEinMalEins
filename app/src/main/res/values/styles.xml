@@ -17,6 +17,10 @@
         <item name="android:layout_marginLeft">@dimen/margin</item>
     </style>
 
+    <style name="tableListStyle" parent="@android:style/Widget.ListView">
+        <item name="android:background">@drawable/card_border</item>
+    </style>
+
     <style name="reihenStyle" parent="@android:style/Widget.TextView">
         <item name="android:background">@drawable/card_border</item>
 
