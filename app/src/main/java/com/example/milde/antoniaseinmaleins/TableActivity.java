@@ -47,4 +47,7 @@ public class TableActivity extends ListActivity {
             data[i] = reihe + " x " + (i+1) + " = " + ((i+1)*reihe);
         }
     }
+
+
+    // TODO warum verschwindet in der Activity die Kopfleiste (Toolbar) ????
 }

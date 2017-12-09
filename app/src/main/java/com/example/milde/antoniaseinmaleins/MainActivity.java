@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private void showTableList() {
         Intent intent = new Intent(getApplicationContext(), TableActivity.class);
 
-        //TODO parameterisierung implmementieren
+        //TODO parameterisierung implemementieren
 
         // nur ein Test hier
         intent.putExtra("reihe", 3);
