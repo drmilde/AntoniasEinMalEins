@@ -36,9 +36,16 @@ public class TableActivity extends ListActivity {
         btnReiheUeben.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO switch to new intent
+                startAufgaben4Activity();
+
             }
         });
+    }
+
+    private void startAufgaben4Activity() {
+        Intent intent = new Intent(getApplicationContext(), Aufgaben4Activity.class);
+        intent.putExtra("reihe", reihe);
+        startActivity(intent);
     }
 
 
