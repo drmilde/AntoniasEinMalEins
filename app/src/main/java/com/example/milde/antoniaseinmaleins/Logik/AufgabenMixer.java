@@ -41,7 +41,6 @@ public class AufgabenMixer implements IAufgabenGenerator{
         state = 0;
     }
 
-
     public AufgabenMixer() {
         this(20, 40, 10, 10);
     }

@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showRowSelection() {
-        Intent intent = new Intent(getApplicationContext(), ReihenAuswahlActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ReihenAuswahl2Activity.class);
         startActivity(intent);
     }
 
