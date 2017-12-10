@@ -12,6 +12,11 @@ import com.example.milde.antoniaseinmaleins.Logik.DataManager;
 
 public class Aufgaben4Activity extends AppCompatActivity {
     private TextView tvAufgabeAnzeige;
+    private Button btnAnswer1;
+    private Button btnAnswer2;
+    private Button btnAnswer3;
+    private Button btnAnswer4;
+
     private int reihe;
 
     @Override
@@ -32,19 +37,32 @@ public class Aufgaben4Activity extends AppCompatActivity {
 
         tvAufgabeAnzeige = (TextView)findViewById(R.id.tvAufgabeAnzeige);
 
-        final Button btnAnswer1 = (Button)findViewById(R.id.btnAnswer1);
+        btnAnswer1 = (Button)findViewById(R.id.btnAnswer1);
+        btnAnswer2 = (Button)findViewById(R.id.btnAnswer2);
+        btnAnswer3 = (Button)findViewById(R.id.btnAnswer3);
+        btnAnswer4 = (Button)findViewById(R.id.btnAnswer4);
+        setFields();
+
         btnAnswer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AufgabenMixer am = (AufgabenMixer)DataManager.getInstance().getAfg();
-                am.generate(reihe);
-                String aufgabenText =  am.getMulFrage()
-                        + " = "
-                        + am.getMulErgebnis();
-
-                tvAufgabeAnzeige.setText(aufgabenText);
-                btnAnswer1.setText(am.getMulLoesung());
+                setFields();
             }
         });
+    }
+
+    private void setFields() {
+        AufgabenMixer am = (AufgabenMixer) DataManager.getInstance().getAfg();
+        am.generate(reihe);
+        String aufgabenText =  am.getMulFrage()
+                + " = "
+                + am.getMulErgebnis();
+
+        tvAufgabeAnzeige.setText(aufgabenText);
+        btnAnswer1.setText(am.getMulVariant());
+        btnAnswer2.setText(am.getMulVariant());
+        btnAnswer3.setText(am.getMulVariant());
+        btnAnswer4.setText(am.getMulVariant());
+
     }
 }

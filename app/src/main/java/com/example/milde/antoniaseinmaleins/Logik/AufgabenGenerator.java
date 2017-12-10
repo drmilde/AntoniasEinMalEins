@@ -15,6 +15,9 @@ public class AufgabenGenerator implements IAufgabenGenerator{
     // Configuration
     private ConfigAufgaben cfg = null;
 
+    // Variations
+    private VariationGenerator vg = new VariationGenerator(7,4);
+
     // strings
     private String ergebnis = "42";
     private String aufgabe = "6 x 7";
@@ -120,6 +123,7 @@ public class AufgabenGenerator implements IAufgabenGenerator{
 
         reihe = "" + op01;
         loesung ="" +  op02;
+        vg.setSeed(op02);
     }
 
 
@@ -140,6 +144,11 @@ public class AufgabenGenerator implements IAufgabenGenerator{
     @Override
     public String getLoesung() {
         return loesung;
+    }
+
+    @Override
+    public String getVariant() {
+        return "" + vg.getVarations();
     }
 
     public String getFrage() {

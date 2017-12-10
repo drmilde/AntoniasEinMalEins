@@ -11,8 +11,10 @@ public interface IAufgabenGenerator {
     public String getErgebnis();
     public String getReihe();
     public String getLoesung();
+    public String getVariant();
 
     public void generate();
     public void generate(int row);
     public void setConfig(ConfigAufgaben cfg);
+
 }

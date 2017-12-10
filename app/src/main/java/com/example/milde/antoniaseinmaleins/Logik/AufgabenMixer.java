@@ -121,6 +121,21 @@ public class AufgabenMixer implements IAufgabenGenerator{
     }
 
     @Override
+    public String getVariant() {
+        switch (state) {
+            case 0:
+                return afgAdd.getVariant();
+            case 1:
+                return afgMin.getVariant();
+            case 2:
+                return afgMul.getVariant();
+            case 3:
+                return afgDiv.getVariant();
+        }
+        return afgAdd.getVariant();
+    }
+
+    @Override
     public void generate() {
         state = (state + (rn.nextInt(16)+1)) % 4;
         afgAdd.generate();
@@ -166,6 +181,10 @@ public class AufgabenMixer implements IAufgabenGenerator{
         return afgAdd.getLoesung();
     }
 
+    public String getAddVariant() {
+        return afgAdd.getVariant();
+    }
+
 
     // MIN
     public String getMinFrage() {
@@ -188,6 +207,11 @@ public class AufgabenMixer implements IAufgabenGenerator{
         return afgMin.getLoesung();
     }
 
+    public String getMinVariant() {
+        return afgMin.getVariant();
+    }
+
+
     // MUL
     public String getMulFrage() {
         return afgMul.getFrage();
@@ -209,6 +233,11 @@ public class AufgabenMixer implements IAufgabenGenerator{
         return afgMul.getLoesung();
     }
 
+    public String getMulVariant() {
+        return afgMul.getVariant();
+    }
+
+
     // DIV
     public String getDivFrage() {
         return afgDiv.getFrage();
@@ -229,5 +258,10 @@ public class AufgabenMixer implements IAufgabenGenerator{
     public String getDivLoesung() {
         return afgDiv.getLoesung();
     }
+
+    public String getDivVariant() {
+        return afgDiv.getVariant();
+    }
+
 
 }
