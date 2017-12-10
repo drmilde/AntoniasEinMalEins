@@ -45,7 +45,18 @@ public class AufgabenGenerator implements IAufgabenGenerator{
     public void generate() {
         op01 = rn.nextInt(maxOp) + 1;
         op02 = rn.nextInt(maxOp) + 1;
+        processOp();
+        createStrings();
+    }
 
+    public void generate(int row) {
+        op01 = row;
+        op02 = rn.nextInt(maxOp) + 1;
+        processOp();
+        createStrings();
+    }
+
+    private void processOp() {
         switch (excerciseType) {
             case ADD_TYPE:
                 result = op01 + op02;
@@ -70,7 +81,6 @@ public class AufgabenGenerator implements IAufgabenGenerator{
                 excerciseType = MUL_TYPE;
                 break;
         }
-        createStrings();
     }
 
     @Override

@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button btnAufgabe4 = (Button)findViewById(R.id.btnAufgabe4);
-
         btnAufgabe4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Aufgaben4Activity.class);
 
         //TODO parameterisierung implemementieren
+
+        //TODO Datenhaltung und Aufgabengenerierung in Singletonklasse ablegen
 
         // nur ein Test hier
         intent.putExtra("answer1", 1);

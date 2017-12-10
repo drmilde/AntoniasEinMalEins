@@ -116,7 +116,88 @@ public class AufgabenMixer implements IAufgabenGenerator{
     }
 
     @Override
+    public void generate(int row) {
+        afgAdd.generate(row);
+        afgMin.generate(row);
+        afgMul.generate(row);
+        afgDiv.generate(row);
+    }
+
+    @Override
     public void setConfig(ConfigAufgaben cfg) {
         this.cfg = cfg;
     }
+
+
+    // getter
+
+    // ADD
+    public String getAddFrage() {
+        return afgAdd.getFrage();
+    }
+
+    public String getAddAufgabe() {
+        return afgAdd.getAufgabe();
+    }
+
+    public String getAddErgebnis() {
+        return afgAdd.getErgebnis();
+    }
+
+    public String getAddReihe() {
+        return afgAdd.getReihe();
+    }
+
+
+    // MIN
+    public String getMinFrage() {
+        return afgMin.getFrage();
+    }
+
+    public String getMinAufgabe() {
+        return afgMin.getAufgabe();
+    }
+
+    public String getMinErgebnis() {
+        return afgMin.getErgebnis();
+    }
+
+    public String getMinReihe() {
+        return afgMin.getReihe();
+    }
+
+    // MUL
+    public String getMulFrage() {
+        return afgMul.getFrage();
+    }
+
+    public String getMulAufgabe() {
+        return afgMul.getAufgabe();
+    }
+
+    public String getMulErgebnis() {
+        return afgMul.getErgebnis();
+    }
+
+    public String getMulReihe() {
+        return afgMin.getReihe();
+    }
+
+    // DIV
+    public String getDivFrage() {
+        return afgDiv.getFrage();
+    }
+
+    public String getDivAufgabe() {
+        return afgDiv.getAufgabe();
+    }
+
+    public String getDivErgebnis() {
+        return afgDiv.getErgebnis();
+    }
+
+    public String getDivReihe() {
+        return afgDiv.getReihe();
+    }
+
 }
