@@ -26,35 +26,70 @@ public class Aufgaben4Activity extends AppCompatActivity {
 
 
         // read the data
-        Intent iin= getIntent();
+        Intent iin = getIntent();
         Bundle extras = iin.getExtras();
 
-        if(extras!=null)
-        {
+        if (extras != null) {
             reihe = extras.getInt("reihe");
         }
 
 
-        tvAufgabeAnzeige = (TextView)findViewById(R.id.tvAufgabeAnzeige);
-
-        btnAnswer1 = (Button)findViewById(R.id.btnAnswer1);
-        btnAnswer2 = (Button)findViewById(R.id.btnAnswer2);
-        btnAnswer3 = (Button)findViewById(R.id.btnAnswer3);
-        btnAnswer4 = (Button)findViewById(R.id.btnAnswer4);
-        setFields();
-
-        btnAnswer1.setOnClickListener(new View.OnClickListener() {
+        tvAufgabeAnzeige = (TextView) findViewById(R.id.tvAufgabeAnzeige);
+        tvAufgabeAnzeige.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setFields();
             }
         });
+
+        btnAnswer1 = (Button) findViewById(R.id.btnAnswer1);
+        btnAnswer2 = (Button) findViewById(R.id.btnAnswer2);
+        btnAnswer3 = (Button) findViewById(R.id.btnAnswer3);
+        btnAnswer4 = (Button) findViewById(R.id.btnAnswer4);
+        setFields();
+
+        btnAnswer1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(btnAnswer1);
+            }
+        });
+        btnAnswer2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(btnAnswer2);
+            }
+        });
+        btnAnswer3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(btnAnswer3);
+            }
+        });
+        btnAnswer4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(btnAnswer4);
+            }
+        });
+
+    }
+
+    private void checkAnswer(Button btn) {
+        String vString = btn.getText().toString();
+        AufgabenMixer am = (AufgabenMixer) DataManager.getInstance().getAfg();
+
+        if (vString.equalsIgnoreCase(am.getMulLoesung())) {
+            btn.setText("OK");
+        } else {
+            btn.setText("NO");
+        }
     }
 
     private void setFields() {
         AufgabenMixer am = (AufgabenMixer) DataManager.getInstance().getAfg();
         am.generate(reihe);
-        String aufgabenText =  am.getMulFrage()
+        String aufgabenText = am.getMulFrage()
                 + " = "
                 + am.getMulErgebnis();
 
@@ -63,6 +98,5 @@ public class Aufgaben4Activity extends AppCompatActivity {
         btnAnswer2.setText(am.getMulVariant());
         btnAnswer3.setText(am.getMulVariant());
         btnAnswer4.setText(am.getMulVariant());
-
     }
 }
