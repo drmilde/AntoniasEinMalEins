@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         btnAufgabe4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAufgaben();
             }
         });
 
@@ -58,14 +57,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Aufgaben4Activity.class);
 
         //TODO parameterisierung implemementieren
-
         //TODO Datenhaltung und Aufgabengenerierung in Singletonklasse ablegen
 
         // nur ein Test hier
-        intent.putExtra("answer1", 1);
-        intent.putExtra("answer2", 2);
-        intent.putExtra("answer3", 3);
-        intent.putExtra("answer1", 4);
+        intent.putExtra("jan", 52);
         startActivity(intent);
 
 

@@ -26,13 +26,17 @@ public class Aufgaben4Activity extends AppCompatActivity {
 
 
         // read the data
+        reihe = 4;
         Intent iin = getIntent();
         Bundle extras = iin.getExtras();
 
         if (extras != null) {
-            reihe = extras.getInt("reihe");
+            if (extras.containsKey("reihe")) {
+                reihe = extras.getInt("reihe");
+            } else {
+                reihe = 4;
+            }
         }
-
 
         tvAufgabeAnzeige = (TextView) findViewById(R.id.tvAufgabeAnzeige);
         tvAufgabeAnzeige.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +85,7 @@ public class Aufgaben4Activity extends AppCompatActivity {
 
         if (vString.equalsIgnoreCase(am.getMulLoesung())) {
             btn.setText("OK");
+            setFields();
         } else {
             btn.setText("NO");
         }
