@@ -10,6 +10,7 @@ public interface IAufgabenGenerator {
     public String getAufgabe();
     public String getErgebnis();
     public String getReihe();
+    public String getLoesung();
 
     public void generate();
     public void generate(int row);

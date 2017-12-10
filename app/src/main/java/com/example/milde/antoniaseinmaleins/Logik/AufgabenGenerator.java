@@ -19,7 +19,8 @@ public class AufgabenGenerator implements IAufgabenGenerator{
     private String ergebnis = "42";
     private String aufgabe = "6 x 7";
     private String frage = "6 x ?";
-    private String reihe = "7";
+    private String reihe = "6";
+    private String loesung = "7";
     private Random rn = new Random();
 
     // state of the generator
@@ -50,8 +51,15 @@ public class AufgabenGenerator implements IAufgabenGenerator{
     }
 
     public void generate(int row) {
+        int oldOp02 = op02;
         op01 = row;
-        op02 = rn.nextInt(maxOp) + 1;
+
+        // no repetion please
+        while(oldOp02 == op02) {
+            op02 = rn.nextInt(maxOp) + 1;
+        }
+
+        // generate results and strings
         processOp();
         createStrings();
     }
@@ -111,6 +119,7 @@ public class AufgabenGenerator implements IAufgabenGenerator{
         }
 
         reihe = "" + op01;
+        loesung ="" +  op02;
     }
 
 
@@ -126,6 +135,11 @@ public class AufgabenGenerator implements IAufgabenGenerator{
 
     public String getReihe() {
         return reihe;
+    }
+
+    @Override
+    public String getLoesung() {
+        return loesung;
     }
 
     public String getFrage() {

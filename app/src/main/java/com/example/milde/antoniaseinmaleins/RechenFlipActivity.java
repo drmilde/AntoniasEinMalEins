@@ -16,13 +16,14 @@ import com.example.milde.antoniaseinmaleins.Helper.MyTimerFinishedCallback;
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenGenerator;
 import com.example.milde.antoniaseinmaleins.Logik.AufgabenMixer;
 import com.example.milde.antoniaseinmaleins.Logik.ConfigAufgaben;
+import com.example.milde.antoniaseinmaleins.Logik.DataManager;
 import com.example.milde.antoniaseinmaleins.Logik.IAufgabenGenerator;
 
 public class RechenFlipActivity extends AppCompatActivity implements MyTimerFinishedCallback {
     private int mShowing = 1;
     private FlipViewWrapper flipViewWrapper;
 
-    private IAufgabenGenerator afg = new AufgabenMixer();
+    private IAufgabenGenerator afg = DataManager.getInstance().getAfg();
     private ConfigAufgaben cfg = new ConfigAufgaben(10);
 
     // Control
